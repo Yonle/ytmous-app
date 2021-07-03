@@ -20,4 +20,10 @@ jobs:
         exec: |
           cordova platform add android && \
           cordova build --no-telemetry && \
-          cp "$(find . -name '*.apk')" .
+          mkdir ./builded_apks
+          cp "$(find . -name '*.apk')" ./builded_apks
+    - name: Store generated APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: "ytmous-apk"
+        path: ./builded_apks
