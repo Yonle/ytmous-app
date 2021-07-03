@@ -14,10 +14,11 @@ jobs:
       uses: actions/upload-artifact@v2
     - name: Build
       uses: oxr463/setup-cordova@0.0.2
-      exec: |
-        cordova platform add android && \
-        cordova build --no-telemetry && \
-        cp "$(find . -name '*.apk')" .
+      with:
+        exec: |
+          cordova platform add android && \
+          cordova build --no-telemetry && \
+          cp "$(find . -name '*.apk')" .
     - name: Store generated APK file
       uses: actions/upload-artifact@v2
       with:
