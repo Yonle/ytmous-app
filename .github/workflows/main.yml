@@ -1,14 +1,25 @@
-name: Ok
-uses: oxr463/setup-cordova@0.0.2
+name: Build
 
 on:
   push:
     branches:
-      - mastwr
+      - master
       
 
-with:
-  exec: |
-    cordova platform add android && \
-    cordova build --no-telemetry && \
-    cp "$(find . -name '*.apk')" .
+jobs:
+  build;
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone Repository
+      uses: actions/upload-artifact@v2
+    - name: Build
+      uses: oxr463/setup-cordova@0.0.2
+      run: |
+        cordova platform add android && \
+        cordova build --no-telemetry && \
+        cp "$(find . -name '*.apk')" .
+    - name: Store generated APK file
+      uses: actions/upload-artifact@v2
+      with:
+        name: ytmous-apk
+        path: .
