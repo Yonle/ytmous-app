@@ -1,7 +1,7 @@
-- name: Ok
-  uses: oxr463/setup-cordova@0.0.2
-  with:
-    exec: |
-      cordova platform add android && \
-      cordova build --no-telemetry && \
-      cp "$(find . -name '*.apk')" .
+name: Ok
+uses: oxr463/setup-cordova@0.0.2
+with:
+  exec: |
+    cordova platform add android && \
+    cordova build --no-telemetry && \
+    cp "$(find . -name '*.apk')" .
