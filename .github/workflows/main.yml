@@ -1,5 +1,12 @@
 name: Ok
 uses: oxr463/setup-cordova@0.0.2
+
+on:
+  push:
+    branches:
+      - mastwr
+      
+
 with:
   exec: |
     cordova platform add android && \
