@@ -19,10 +19,9 @@ jobs:
       with:
         exec: |
           cordova platform add android && \
-          cordova build --no-telemetry && \
-          cp "$(find . -name '*.apk')" .
+          cordova build --no-telemetry
     - name: Store generated APK file
       uses: actions/upload-artifact@v2
       with:
         name: ytmous-apk
-        path: .
+        path: /github/workspace/platforms/android/app/build/outputs/apk/debug/

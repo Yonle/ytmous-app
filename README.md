@@ -1,5 +1,5 @@
 # ytmous-app
-This is a standalone webview client that point to https://ytmous.herokuapp.com. 
+This is a standalone webview [ytmous](https://github.com/Yonle/ytmous) client that point to https://ytmous.herokuapp.com. 
 
 ## Building
 ```bash
