@@ -2,16 +2,17 @@
   "name": "app.yonle.ytmous",
   "displayName": "ytmous",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "A anonymous youtube that does not spy on you",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ecosystem:cordova"
+    "ytmous",
+    "webview"
   ],
-  "author": "Apache Cordova Team",
-  "license": "Apache-2.0",
+  "author": "Yonle",
+  "license": "CC0-v1.0",
   "devDependencies": {
     "cordova-android": "^9.1.0",
     "cordova-plugin-whitelist": "^1.3.4"
